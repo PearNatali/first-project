@@ -9,6 +9,7 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   position: relative;
 }
+/*Свойства блока header*/
 
 .header {
   position: relative;
@@ -20,7 +21,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  /* выше установили ограничения для секции */
+  padding-bottom: 100px;
+  background-color: #f2f2f2;
 }
 
 .header__logo_place_header {
@@ -30,7 +32,7 @@
   height: 32px;
   padding-top: 30px;
   padding-left: 64px;
-  z-index: 1;  
+  z-index: 3;  
 }
 
 .header__title {
@@ -43,7 +45,7 @@
   font-weight: bold;
   text-decoration: none;
   color: black;
-  z-index: 1;
+  z-index: 4;
 }
 
 .header__subtitle {
@@ -56,7 +58,7 @@
   font-family: helvetica, Arial, Helvetica, sans-serif;
   font-weight: normal;
   align-self: flex-end;
-  z-index: 1;
+  z-index: 4;
   }
 
 .header__link {
@@ -64,7 +66,7 @@
   font-weight: normal;
   color: #2f80ed;
   text-decoration: none;
-  z-index: 1;
+  z-index: 4;
 }
 
 .link_place_header {
@@ -73,7 +75,7 @@
 }
 
 .header__main-illustation {
-  z-index: -1;
+  z-index: 3;
   position: absolute;
   height: 608px;
   width: 765px;
@@ -81,7 +83,6 @@
   bottom: 0;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   top: 64px;
@@ -89,15 +90,18 @@
   height: 568px;
   width: 568px;
   background-color: #2f80ed;
-  z-index: -2;
+  z-index: 2;
 }
 
 .content {
   margin: 0;
 }
 
+/*Свойства блока description*/
+
 .description {
   padding-top: 100px;
+  margin: 0;
   padding-bottom: 100px;
   display: flex;
   flex-direction: row;
@@ -107,6 +111,8 @@
 }
 
 .two-columns {
+  width: 175px;
+  margin: 0;
   width: 80%;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -116,12 +122,14 @@
 }
 
 .two-columns__bref {
-  width: 175px;
+  text-decoration: none;
   color: #2f80ed;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  vertical-align: top;
   text-justify: left;
+  
 }
 
 .two-columns__main-text {
@@ -146,12 +154,15 @@
   font-weight: bold;
 }
 
+/*Свойства блока digits*/
+
 .digits {
+  margin: 0 auto;
   max-width: 1100px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 100px auto;
 }
 
 .digits__section-title {
@@ -175,14 +186,13 @@
   font-weight: normal;
 }
 
-.digits__table {
+.table {
   width: 1100px;
   margin: 0;
-  list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   text-align: left;
 }
 
@@ -192,12 +202,11 @@
 }
 
 .table__cell_theme_light {
-  
+  font-family: helvetica, Arial, Helvetica, sans-serif;
+  list-style: none;
 }
 
 .table__heading {
-  margin: 0 0 0 20px;
-  font-family: helvetica, Arial, Helvetica, sans-serif;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
@@ -205,38 +214,36 @@
 
 .table__text {
   margin: 20px 0 0 0;
-  font-family: helvetica, Arial, Helvetica, sans-serif;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
+/*Свойства блока feynman*/
+
 .feynman {
+  margin: 0;
   height: 890px;
   position: relative;
   margin: 100px 0 0 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.feynman__one-column {
-  margin: 0;
-  position: relative;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
+  margin: 100 0 0 0;
+  padding: 0;
   width: 648px;
   font-family: helvetica, Arial, Helvetica, sans-serif;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
-
+  text-align: center;
+  z-index: 4;
 }
 
 .feynman__subtitle {
@@ -245,6 +252,17 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  text-align: center;
+  z-index: 4;
+}
+
+.feynman__main-illustation {
+  position: absolute;
+  width: 867px;
+  height: 637px;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
 .feynman__link {
@@ -255,50 +273,201 @@
   font-size: 36px;
   font-weight: normal;
   position: absolute;
-  
+  right: 48px;
+  top: 445px;
+  z-index: 4;
 }
 
-.feynman__main-illustation {
-  position: absolute;
-  
-  width: 867px;
-  height: 637px;
-  left: 0;
-  bottom: 0;
-  z-index: -2;
-}
+/*Свойства блока kaufman*/
 
-.feynman__two-column {
+.kaufman {
+  margin: 0 auto;
+  max-width: 1100px;
+  height: 890px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 
+.kaufman__section-title {
+  width: 60%;
+  margin: 90 0 0 0;
+  z-index: 6;
+}
 
+.kaufman__section-title_theme_dark {
+  font-family: helvetica, Arial, Helvetica, sans-serif;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
 
+.kaufman__section-subtitle {
+  width: 60%;
+}
 
+.kaufman__section-subtitle_theme_dark {
+  font-family: helvetica, Arial, Helvetica, sans-serif;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  z-index: 6;
+}
 
+.kaufman__table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.kaufman__table_theme_dark {
+  
+}
 
+.table__cell {
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
 }
+
+.table__heading {
+
+}
+
+.table__heading_theme_dark {
+
+}
+
+.table__text {
+
+}
+
+.kaufman__table_theme_dark {
+
+}
+
+.table__cell {
+
+}
+
+.table__cell_theme_dark {
+
+}
+
+.table__heading {
+
+}
+
+.table__heading_theme_dark {
+
+}
+
+.table__text {
+
+}
+
+.table__text_theme_dark {
+
+}
+
+/*Свойства блока footer*/
+
+.footer {
+
+}
+
+.footer__column {
+
+}
+
+.footer__column_centent_copyright {
+
+}
+
+.header__logo_place_footer {
+
+}
+
+.footer__author {
+
+}
+
+.footer__column_content_social {
+
+}
+
+.footer__column_content_social-text {
+
+}
+
+.footer__column_info {
+
+}
+
+.footer__column_column-heading {
+
+}
+
+.footer__column_link {
+
+}
+
+.footer__column_link-first {
+
+}
+
+.footer__column_link-two {
+
+}
+
+.footer__column_link-three {
+
+}
+
+.footer__column_social {
+
+}
+
+.footer__column_social-icon_facebook {
+
+}
+
+.footer__column_link-facebook {
+
+}
+
+.footer__column_social-icon_vk {
+
+}
+
+.footer__column_link-vk {
+
+}
+
+.footer__column_social-icon_instagram {
+
+}
+
+.footer__column_link-instagram {
+  
+}
+
+
+
+
+
+
+
+
+
 
