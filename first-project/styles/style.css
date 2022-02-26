@@ -121,6 +121,7 @@
   width: 175px;
   margin: 0;
   padding: 0;
+  
 }
 
 .description__bref {
@@ -135,7 +136,7 @@
 .paragraph {
   width: 80%;
   min-width: 784px;
-  text-justify: left;
+  text-align: left;
   line-height: 34px;
   font-size: 18px;
   font-weight: normal;
@@ -244,7 +245,7 @@
 }
 
 .feynman__title {
-  margin: 100 0 0 0;
+  margin: 100px 0 0 0;
   padding: 0;
   width: 648px;
   font-family: helvetica, Arial, Helvetica, sans-serif;
