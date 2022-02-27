@@ -27,7 +27,7 @@
 
 .header__logo_place_header {
   margin: 0;
-  position: absolute; 
+  position: absolute;
   width: 183px;
   height: 32px;
   padding-top: 30px;
@@ -50,11 +50,13 @@
 
 .header__subtitle {
   margin: 0;
+  padding: 0;
+  width: 388px;
   position: absolute;
+  left: 64px;
+  bottom: 30px;
   line-height: 25px;
   font-size: 18px;
-  padding-left: 64px;
-  padding-bottom: 30px;
   font-family: helvetica, Arial, Helvetica, sans-serif;
   font-weight: normal;
   align-self: flex-end;
@@ -108,13 +110,13 @@
 }
 
 .two-columns {
-  margin: 100px auto 0;
+  margin: 100px 0 0 0;
   width: 80%;
+  min-height: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: helvetica, Arial, Helvetica, sans-serif;
-  color: black;
 }
 
 .bref {
@@ -162,7 +164,7 @@
 /*Свойства блока digits*/
 
 .digits {
-  margin: 100px auto;
+  margin: 100px auto 100px;
   max-width: 1100px;
   display: flex;
   flex-direction: column;
@@ -232,7 +234,6 @@
 /*Свойства блока feynman*/
 
 .feynman {
-  margin: 0;
   height: 890px;
   position: relative;
   margin: 100px 0 0 0;
@@ -245,7 +246,7 @@
 }
 
 .feynman__title {
-  margin: 100px 0 0 0;
+  margin: 100px 0 70px 0;
   padding: 0;
   width: 648px;
   font-family: helvetica, Arial, Helvetica, sans-serif;
@@ -257,7 +258,7 @@
 }
 
 .feynman__subtitle {
-  margin: 70px 0 0 0;
+  margin: 0;
   font-family: helvetica, Arial, Helvetica, sans-serif;
   line-height: 51px;
   font-size: 36px;
@@ -291,7 +292,7 @@
 /*Свойства блока kaufman*/
 
 .kaufman {
-  padding: 90px 0;
+  padding: 90px 0 90px 0;
   background-color: black;
   position: relative;
   display: flex;
@@ -343,7 +344,7 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  color: white
+  color: white;
 }
 
 .column__centent_copyright {
@@ -377,6 +378,8 @@
 .content-heading {
   font-family: helvetica, Arial, Helvetica, sans-serif;
   font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -389,7 +392,7 @@
 .column-link {
   text-align: left;
   font-family: helvetica, Arial, Helvetica, sans-serif;
-  line-height: 25px;
+  line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
@@ -404,7 +407,7 @@
 .content-link {
   text-align: left;
   font-family: helvetica, Arial, Helvetica, sans-serif;
-  line-height: 25px;
+  line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
